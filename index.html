@@ -3,40 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero to One Radar - 혁신 기업 탐색</title>
+    <title>Zero to One Radar</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Zero to One Radar</h1>
-        <p class="subtitle">혁신적인 Zero to One 기업들을 탐색하세요</p>
+        <p>혁신적인 Zero to One 기업들을 탐색해보세요</p>
     </header>
 
     <main>
-        <section class="filters">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="기업명 또는 설명으로 검색...">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="기업명 또는 설명으로 검색...">
+            <div class="filter-buttons">
+                <button class="active" data-industry="전체">전체</button>
+                <button data-industry="AI">AI</button>
+                <button data-industry="바이오">바이오</button>
+                <button data-industry="우주">우주</button>
+                <button data-industry="에너지">에너지</button>
+                <button data-industry="기타">기타</button>
             </div>
-            <div class="industry-filters">
-                <button class="filter-btn active" data-industry="all">전체</button>
-                <button class="filter-btn" data-industry="AI">AI</button>
-                <button class="filter-btn" data-industry="Biotech">바이오</button>
-                <button class="filter-btn" data-industry="Space">우주</button>
-                <button class="filter-btn" data-industry="Energy">에너지</button>
-                <button class="filter-btn" data-industry="Other">기타</button>
-            </div>
-        </section>
+        </div>
 
-        <section class="companies-grid" id="companiesContainer">
-            <!-- Companies will be dynamically inserted here -->
-        </section>
+        <div id="companies" class="companies-grid"></div>
     </main>
 
+    <!-- 회사 상세정보 모달 -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalCompanyName"></h2>
+                <span id="modalIndustryTag"></span>
+            </div>
+            <div class="modal-body">
+                <div class="info-section">
+                    <h3>핵심 사업 아이템</h3>
+                    <p id="modalCoreBusiness"></p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>주요 임직원</h3>
+                        <div id="modalExecutives"></div>
+                    </div>
+                    <div class="info-card">
+                        <h3>지분 구조</h3>
+                        <div id="modalShareholding"></div>
+                    </div>
+                    <div class="info-card">
+                        <h3>투자 포인트</h3>
+                        <div id="modalInvestmentPoints"></div>
+                    </div>
+                    <div class="info-card">
+                        <h3>벨류에이션</h3>
+                        <div id="modalValuation"></div>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <h3>재무 정보</h3>
+                    <div id="modalFinancials"></div>
+                </div>
+                <div class="info-section">
+                    <h3>최근 뉴스</h3>
+                    <div id="modalNews"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>Zero to One Radar - 혁신 기업 탐색</p>
+        <p>Zero to One Radar</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
