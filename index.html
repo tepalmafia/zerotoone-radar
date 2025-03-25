@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to One Radar - 혁신 기업 탐색</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Zero to One Radar</h1>
+        <p class="subtitle">혁신적인 Zero to One 기업들을 탐색하세요</p>
+    </header>
+
+    <main>
+        <section class="filters">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="기업명 또는 설명으로 검색...">
+            </div>
+            <div class="industry-filters">
+                <button class="filter-btn active" data-industry="all">전체</button>
+                <button class="filter-btn" data-industry="AI">AI</button>
+                <button class="filter-btn" data-industry="Biotech">바이오</button>
+                <button class="filter-btn" data-industry="Space">우주</button>
+                <button class="filter-btn" data-industry="Energy">에너지</button>
+                <button class="filter-btn" data-industry="Other">기타</button>
+            </div>
+        </section>
+
+        <section class="companies-grid" id="companiesContainer">
+            <!-- Companies will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Zero to One Radar - 혁신 기업 탐색</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
